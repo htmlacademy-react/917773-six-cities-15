@@ -1,19 +1,10 @@
 import { JSX } from 'react';
-<<<<<<< HEAD
 import Currency from '../../shared/Currency';
 import OfferTypes from '../../shared/OfferTypes';
 
 type FavoriteOfferCardProps = {
   price: number;
   currencyType: Currency;
-=======
-import { CurrencyTypes } from '../../shared/CurrencyTypes';
-import { OfferTypes } from '../../shared/OfferTypes';
-
-type FavoriteOfferCardProps = {
-  price: number;
-  currencyType: CurrencyTypes;
->>>>>>> e75c7364109fc6a7defdb0052c79c2a5ed7f6e8c
   title: string;
   offerType: OfferTypes;
   ratingPercent: number;
