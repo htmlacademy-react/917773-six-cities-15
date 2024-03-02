@@ -77,7 +77,7 @@ function Favorites(): JSX.Element {
           />
         </a>
       </footer>
-      </>
+    </>
   );
 }
 

@@ -22,7 +22,7 @@ function Main({ offerCount }: MainProps): JSX.Element {
               <a className='locations__item-link tabs__item' href='#'>
                 <span>Paris</span>
               </a>
-              </li>
+            </li>
             <li className='locations__item'>
               <a className='locations__item-link tabs__item' href='#'>
                 <span>Cologne</span>
@@ -81,7 +81,7 @@ function Main({ offerCount }: MainProps): JSX.Element {
                   Top rated first
                 </li>
               </ul>
-              </form>
+            </form>
             <div className='cities__places-list places__list tabs__content'>
               <CityOfferCard
                 price={120}
@@ -133,7 +133,7 @@ function Main({ offerCount }: MainProps): JSX.Element {
             <section className='cities__map map' />
           </div>
         </div>
-        </div>
+      </div>
     </main>
   );
 }

@@ -57,10 +57,10 @@ function MainEmpty(): JSX.Element {
                 Dusseldorf
               </p>
             </div>
-            </section>
+          </section>
           <div className='cities__right-section' />
         </div>
-        </div>
+      </div>
     </main>
   );
 }

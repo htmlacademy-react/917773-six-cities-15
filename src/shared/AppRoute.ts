@@ -4,5 +4,5 @@ enum AppRoute {
     Favorites = 'favorites',
     Offer = 'offer/:id'
   }
-  
-  export default AppRoute;
+
+export default AppRoute;

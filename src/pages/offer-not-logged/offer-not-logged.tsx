@@ -1,7 +1,7 @@
 import { JSX } from 'react';
 import NearOfferCard from '../../components/near-offer-card/near-offer-card';
 import Currency from '../../shared/Currency';
-import  OfferTypes from '../../shared/OfferTypes';
+import OfferTypes from '../../shared/OfferTypes';
 
 function OfferNotLogged(): JSX.Element {
   return (

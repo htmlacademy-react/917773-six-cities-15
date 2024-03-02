@@ -3,5 +3,5 @@ enum AuthorizationStatus {
     NoAuth = 'NO_AUTH',
     Unknown = 'UNKNOWN',
   }
-  
-  export default AuthorizationStatus;
+
+export default AuthorizationStatus;
