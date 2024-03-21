@@ -12,9 +12,13 @@ export const ReviewList: FC<TOfferListProps> = ({ reviews }) => (
       Reviews · <span className="reviews__amount">{reviews.length}</span>
     </h2>
     <ul className="reviews__list">
-      {reviews.map((review) => (
-        <ReviewCard key={review.id} review={review} />
-      ))}
+      {reviews
+        .sort(
+          (review1, review2) => review2.date.getTime() - review1.date.getTime()
+        )
+        .map((review) => (
+          <ReviewCard key={review.id} review={review} />
+        ))}
     </ul>
   </>
 );
