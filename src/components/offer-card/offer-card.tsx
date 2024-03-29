@@ -13,7 +13,7 @@ import { TOffer } from '../../const';
 export type TOfferCardProps = {
   offer: TOffer;
   offerCardType: OfferCardType;
-  setSelectedOffer: (offer: TOffer) => void;
+  setSelectedOffer?: (offer: TOffer) => void;
 };
 
 export const OfferCard: FC<TOfferCardProps> = ({
@@ -30,7 +30,7 @@ export const OfferCard: FC<TOfferCardProps> = ({
   const imageSize = getCardImageSize(offerCardType);
   const offerLink = getOfferLinkById(offer.id);
 
-  const offerMouseOverHandler = () => {
+  const handleOfferMouseOver = () => {
     if (setSelectedOffer) {
       setSelectedOffer(offer);
     }
@@ -39,7 +39,7 @@ export const OfferCard: FC<TOfferCardProps> = ({
   return (
     <article
       className={`${cardClass} place-card`}
-      onMouseOver={offerMouseOverHandler}
+      onMouseOver={handleOfferMouseOver}
     >
       {offer.isPremium && (
         <div className="place-card__mark">

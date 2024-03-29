@@ -5,12 +5,13 @@ import { TCity } from '../../const';
 export type TCityTabProps = {
   city: TCity;
   isActive: boolean;
-  setActiveCity: (city: TCity) => void;
+  //setActiveCity: (city: TCity) => void;
+  onChangeCity: (city: TCity) => void;
 };
 export const CityTab: FC<TCityTabProps> = ({
   city,
   isActive,
-  setActiveCity,
+  onChangeCity,
 }) => (
   <li className="locations__item">
     <Link
@@ -18,7 +19,7 @@ export const CityTab: FC<TCityTabProps> = ({
         isActive ? 'tabs__item--active' : ''
       }`}
       to="#"
-      onClick={() => setActiveCity(city)}
+      onClick={() => onChangeCity(city)}
     >
       <span>{city.name}</span>
     </Link>

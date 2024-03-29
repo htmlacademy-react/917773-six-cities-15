@@ -14,17 +14,10 @@ import { AuthorizationStatus, TOffer, TReview } from '../const';
 
 export type TAppProps = {
   offers: TOffer[];
-  favoriteOffers: TOffer[];
-  nearOffers: TOffer[];
   reviews: TReview[];
 };
 
-export const App: FC<TAppProps> = ({
-  offers,
-  favoriteOffers,
-  nearOffers,
-  reviews,
-}: TAppProps) => {
+export const App: FC<TAppProps> = ({ offers, reviews }: TAppProps) => {
   const authorizationStatus: AuthorizationStatus = AuthorizationStatus.Auth;
   return (
     <HelmetProvider>
@@ -33,7 +26,7 @@ export const App: FC<TAppProps> = ({
           <Route
             path={AppRoute.Root}
             element={
-              <Layout authorizationStatus={AuthorizationStatus.Auth} />
+              <Layout authorizationStatus={AuthorizationStatus.NoAuth} />
             }
           >
             <Route index element={<Main offers={offers} />} />
@@ -41,7 +34,7 @@ export const App: FC<TAppProps> = ({
               path={AppRoute.Favorites}
               element={
                 <PrivateRoute authorizationStatus={authorizationStatus}>
-                  <Favorites offers={favoriteOffers} />
+                  <Favorites />
                 </PrivateRoute>
               }
             />
@@ -49,7 +42,6 @@ export const App: FC<TAppProps> = ({
               path={AppRoute.Offer}
               element={
                 <Offer
-                  nearOffers={nearOffers}
                   nearOfferCardType={OfferCardType.Near}
                   reviews={reviews}
                 />
