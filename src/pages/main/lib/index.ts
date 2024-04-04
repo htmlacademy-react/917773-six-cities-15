@@ -14,6 +14,6 @@ export const getSortedOffers = (
         (offer1, offer2) => offer2.rating - offer1.rating
       );
     default:
-      return [...offers].sort((offer1, offer2) => offer1.id - offer2.id);
+      return offers;
   }
 };
